@@ -1,0 +1,140 @@
+body, html {
+    background: #ffeead;
+    margin: 10px;
+}
+
+.container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(6, 95px);
+    grid-template-rows: 40px 300px 55px;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-align: center;
+    color: #ffeead;
+}
+
+.map-size {
+    grid-row: 2;
+    grid-column: 1 / 7;
+}
+
+.container-map {
+    box-shadow: 0px 17px 51px -19px #444;
+}
+
+#map {
+    width: 585px;
+    height: 300px;
+}
+
+#map:focus {
+    visibility: hidden;
+}
+
+.ol-zoom {
+    visibility: hidden;
+}
+
+.ol-attribution {
+    visibility: hidden;
+}
+
+.close-map {
+    grid-column: 6;
+    background-image: url("img/close.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    background-position: right;
+    cursor: pointer;
+    width: 40px;
+    margin-left: 60px;
+}
+
+.is-visible {
+    visibility: visible;
+}
+
+.is-not-visible {
+    visibility: hidden;
+}
+
+.open-map {
+    grid-row: 3;
+    grid-column: 1;
+    background: #009688;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: -20px;
+    margin-top: 16px;
+    /* box-shadow: 0px 4px 10px -4px #444; */
+}
+
+.open-map:hover {
+    background: #086158;
+}
+
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    color: grey;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 182px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+    user-select: text;
+}
+
+.ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+.ol-popup-closer:after {
+    content: "x";
+}
+
+.ol-popup-closer, a {
+      color: grey;
+}
